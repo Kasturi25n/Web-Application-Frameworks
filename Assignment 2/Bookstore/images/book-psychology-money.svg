@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPsychology" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A27" />
+      <stop offset="100%" stop-color="#143210" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgPsychology)" />
+
+  <!-- Graphic: Brain shaped like a tree or growth rings with dollar symbol -->
+  <g stroke="#F5E6D3" stroke-width="2" fill="none" opacity="0.6" transform="translate(200, 220)">
+    <!-- Right hemisphere -->
+    <path d="M 0,-80 C 40,-80 70,-60 70,-30 C 70,-10 50,0 70,20 C 70,40 50,60 20,70 C 10,75 5,80 0,80" />
+    <!-- Left hemisphere -->
+    <path d="M 0,-80 C -40,-80 -70,-60 -70,-30 C -70,-10 -50,0 -70,20 C -70,40 -50,60 -20,70 C -10,75 -5,80 0,80" />
+    <!-- Inner lines (growth rings) -->
+    <path d="M 0,-50 C 25,-50 45,-35 45,-15 C 45,0 30,10 40,25 C 40,35 25,45 0,50" />
+    <path d="M 0,-50 C -25,-50 -45,-35 -45,-15 C -45,0 -30,10 -40,25 C -40,35 -25,45 0,50" />
+    <path d="M 0,-20 C 10,-20 20,-10 20,0 C 20,10 10,15 0,20" />
+    <path d="M 0,-20 C -10,-20 -20,-10 -20,0 C -20,10 -10,15 0,20" />
+    <!-- Center Line -->
+    <line x1="0" y1="-80" x2="0" y2="80" stroke-dasharray="4 4" />
+  </g>
+  
+  <!-- Star sparkles around brain -->
+  <g fill="#F5E6D3" opacity="0.8">
+    <path d="M 280 140 L 282 145 L 287 147 L 282 149 L 280 154 L 278 149 L 273 147 L 278 145 Z" />
+    <path d="M 110 280 L 111 283 L 114 284 L 111 285 L 110 288 L 109 285 L 106 284 L 109 283 Z" />
+    <path d="M 300 270 L 301 273 L 304 274 L 301 275 L 300 278 L 299 275 L 296 274 L 299 273 Z" />
+  </g>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle">
+    <!-- Header -->
+    <text x="200" y="70" font-size="11" font-weight="600" fill="#F5E6D3" letter-spacing="4">TIMELESS LESSONS ON WEALTH, GREED, &amp; HAPPINESS</text>
+    
+    <!-- Title -->
+    <text x="200" y="400" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="1.5">THE PSYCHOLOGY</text>
+    <text x="200" y="440" font-size="28" font-weight="600" fill="#F5E6D3" letter-spacing="1">OF MONEY</text>
+    
+    <!-- Decorative Line -->
+    <line x1="160" y1="465" x2="240" y2="465" stroke="#F5E6D3" stroke-width="2" />
+
+    <!-- Author -->
+    <text x="200" y="510" font-size="18" font-weight="700" fill="#FFFFFF">MORGAN HOUSEL</text>
+    <text x="200" y="535" font-size="11" font-weight="500" fill="#9CD897" letter-spacing="0.5">Over 2 Million Copies Sold</text>
+  </g>
+</svg>

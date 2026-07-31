@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4B0F6B" />
+      <stop offset="100%" stop-color="#210333" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#F2A900" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#purpleGrad)" />
+
+  <!-- Diagonal split gold design -->
+  <path d="M 0 420 L 400 320 L 400 600 L 0 600 Z" fill="url(#goldGrad)" />
+  <line x1="0" y1="420" x2="400" y2="320" stroke="#FFFFFF" stroke-width="4" opacity="0.4" />
+
+  <!-- Graphics / Coins in background -->
+  <circle cx="200" cy="180" r="60" fill="url(#goldGrad)" opacity="0.8" />
+  <circle cx="200" cy="180" r="50" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.5" />
+  <!-- Dollar sign in circle -->
+  <text x="200" y="200" font-family="'Poppins', sans-serif" font-size="65" font-weight="800" fill="#210333" text-anchor="middle">$</text>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle">
+    <!-- Author -->
+    <text x="200" y="70" font-size="13" font-weight="600" fill="#FFD700" letter-spacing="3">ROBERT T. KIYOSAKI</text>
+    
+    <!-- Title Section -->
+    <text x="200" y="290" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="2">RICH DAD</text>
+    <text x="200" y="330" font-size="20" font-weight="600" fill="#FFFFFF" letter-spacing="1">POOR DAD</text>
+    
+    <!-- Subtitle (in dark purple over gold) -->
+    <text x="200" y="470" font-size="13" font-weight="700" fill="#210333" letter-spacing="0.5">What The Rich Teach Their Kids</text>
+    <text x="200" y="490" font-size="13" font-weight="700" fill="#210333" letter-spacing="0.5">About Money - That The Poor</text>
+    <text x="200" y="510" font-size="13" font-weight="700" fill="#210333" letter-spacing="0.5">And Middle Class Do Not!</text>
+    
+    <!-- Tag -->
+    <rect x="120" y="540" width="160" height="25" rx="5" fill="#210333" />
+    <text x="200" y="557" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="1">#1 PERSONAL FINANCE</text>
+  </g>
+</svg>

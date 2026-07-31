@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover your next favorite book at Bookstore. Explore Fiction, Programming, Science, and more in our cozy, premium literary sanctuary.">
+  <title>Bookstore | Cozy Library & Bookstore</title>
+  
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. HEADER & NAVIGATION ==================== -->
+  <header class="header" id="header">
+    <div class="header-container container">
+      <!-- Bookstore Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">Bookstore</span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#categories" class="nav-link">Categories</a></li>
+          <li class="nav-item"><a href="#featured" class="nav-link">Featured</a></li>
+          <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Nav Button (Optional but adds to premium UI feel) -->
+      <div class="header-action">
+        <a href="#featured" class="btn btn-secondary">Browse Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO BANNER ==================== -->
+    <section class="hero" id="home">
+      <div class="hero-container container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Welcome to your literary sanctuary</span>
+          <h1 class="hero-title">Discover Your Next Favorite Book</h1>
+          <p class="hero-description">
+            Step inside a warm, cozy corner of the literary world. We curate exceptional books to inspire your mind, nourish your soul, and guide you on your next intellectual adventure.
+          </p>
+          <div class="hero-cta">
+            <a href="#featured" class="btn btn-primary">Browse Books</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. BOOK CATEGORIES ==================== -->
+    <section class="categories section-padding" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Curated Collections</span>
+          <h2 class="section-title">Explore Categories</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="category-grid">
+          <!-- 1. Fiction -->
+          <div class="category-card">
+            <div class="category-icon">✨</div>
+            <h3 class="category-name">Fiction</h3>
+            <p class="category-desc">Immerse yourself in imaginative worlds and timeless narratives.</p>
+          </div>
+          <!-- 2. Programming -->
+          <div class="category-card">
+            <div class="category-icon">💻</div>
+            <h3 class="category-name">Programming</h3>
+            <p class="category-desc">Master code architectures, design patterns, and new languages.</p>
+          </div>
+          <!-- 3. Science -->
+          <div class="category-card">
+            <div class="category-icon">🧪</div>
+            <h3 class="category-name">Science</h3>
+            <p class="category-desc">Unravel the complex laws of the universe, physics, and biology.</p>
+          </div>
+          <!-- 4. Romance -->
+          <div class="category-card">
+            <div class="category-icon">💖</div>
+            <h3 class="category-name">Romance</h3>
+            <p class="category-desc">Heartwarming tales of connection, passion, and human relationships.</p>
+          </div>
+          <!-- 5. Biography -->
+          <div class="category-card">
+            <div class="category-icon">👤</div>
+            <h3 class="category-name">Biography</h3>
+            <p class="category-desc">Read the lived journeys and hard-won wisdom of notable figures.</p>
+          </div>
+          <!-- 6. Comics -->
+          <div class="category-card">
+            <div class="category-icon">💥</div>
+            <h3 class="category-name">Comics</h3>
+            <p class="category-desc">Vibrant graphic storytelling full of action, mystery, and humor.</p>
+          </div>
+          <!-- 7. History -->
+          <div class="category-card">
+            <div class="category-icon">⏳</div>
+            <h3 class="category-name">History</h3>
+            <p class="category-desc">Explore the pivotal moments, eras, and cultures that shaped us.</p>
+          </div>
+          <!-- 8. Self Help -->
+          <div class="category-card">
+            <div class="category-icon">🌱</div>
+            <h3 class="category-name">Self Help</h3>
+            <p class="category-desc">Practical frameworks to refine your habits, mindset, and lifestyle.</p>
+          </div>
+          <!-- 9. Business -->
+          <div class="category-card">
+            <div class="category-icon">📈</div>
+            <h3 class="category-name">Business</h3>
+            <p class="category-desc">Strategy, leadership, finance, and economics explained simply.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. FEATURED BOOKS ==================== -->
+    <section class="featured section-padding" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Staff Recommendations</span>
+          <h2 class="section-title">Featured Books</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="books-grid">
+          <!-- Card 1: Harry Potter -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-harry-potter.svg" alt="Harry Potter Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Harry Potter and the Sorcerer's Stone</h3>
+              <p class="book-author">J.K. Rowling</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.9)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹499</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Demon Slayer -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-demon-slayer.svg" alt="Demon Slayer Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Demon Slayer: Kimetsu no Yaiba, Vol. 1</h3>
+              <p class="book-author">Koyoharu Gotouge</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.8)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹299</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Naruto -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-naruto.svg" alt="Naruto Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Naruto, Vol. 1</h3>
+              <p class="book-author">Masashi Kishimoto</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.8)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹299</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Percy Jackson -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-percy-jackson.svg" alt="Percy Jackson Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Percy Jackson: The Lightning Thief</h3>
+              <p class="book-author">Rick Riordan</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.7)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹399</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Attack on Titan -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-attack-on-titan.svg" alt="Attack on Titan Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Attack on Titan, Vol. 1</h3>
+              <p class="book-author">Hajime Isayama</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.8)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹350</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: The Hobbit -->
+          <div class="book-card">
+            <div class="book-cover-wrapper">
+              <img src="images/book-the-hobbit.svg" alt="The Hobbit Book Cover" class="book-cover">
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">The Hobbit</h3>
+              <p class="book-author">J.R.R. Tolkien</p>
+              <div class="book-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-number">(4.9)</span>
+              </div>
+              <div class="book-footer">
+                <span class="book-price">₹450</span>
+                <button type="button" class="btn btn-primary btn-sm">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. BOOK DETAILS TABLE ==================== -->
+    <section class="book-table section-padding" id="details-table">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Catalog Details</span>
+          <h2 class="section-title">Quick Specifications Table</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="table-responsive-wrapper">
+          <table class="table-details">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Price</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Title" class="bold-text">Harry Potter and the Sorcerer's Stone</td>
+                <td data-label="Author">J.K. Rowling</td>
+                <td data-label="Price" class="price-text">₹499</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.9)</td>
+              </tr>
+              <tr>
+                <td data-label="Title" class="bold-text">Demon Slayer: Kimetsu no Yaiba, Vol. 1</td>
+                <td data-label="Author">Koyoharu Gotouge</td>
+                <td data-label="Price" class="price-text">₹299</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.8)</td>
+              </tr>
+              <tr>
+                <td data-label="Title" class="bold-text">Naruto, Vol. 1</td>
+                <td data-label="Author">Masashi Kishimoto</td>
+                <td data-label="Price" class="price-text">₹299</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.8)</td>
+              </tr>
+              <tr>
+                <td data-label="Title" class="bold-text">Percy Jackson: The Lightning Thief</td>
+                <td data-label="Author">Rick Riordan</td>
+                <td data-label="Price" class="price-text">₹399</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.7)</td>
+              </tr>
+              <tr>
+                <td data-label="Title" class="bold-text">Attack on Titan, Vol. 1</td>
+                <td data-label="Author">Hajime Isayama</td>
+                <td data-label="Price" class="price-text">₹350</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.8)</td>
+              </tr>
+              <tr>
+                <td data-label="Title" class="bold-text">The Hobbit</td>
+                <td data-label="Author">J.R.R. Tolkien</td>
+                <td data-label="Price" class="price-text">₹450</td>
+                <td data-label="Rating"><span class="stars text-accent">★★★★★</span> (4.9)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CUSTOMER REVIEWS ==================== -->
+    <section class="reviews section-padding" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Reader Testimonials</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="images/avatar-1.svg" alt="Alex Morgan Portrait" class="review-avatar">
+              <div class="review-meta">
+                <h3 class="review-name">Alex Morgan</h3>
+                <span class="review-stars">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-text">
+              "This bookstore is an absolute dream! The atmosphere is incredibly cozy, and their book recommendations are always spot-on. I bought Harry Potter here and it brought back so much childhood nostalgia."
+            </p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="images/avatar-2.svg" alt="Sarah Jenkins Portrait" class="review-avatar">
+              <div class="review-meta">
+                <h3 class="review-name">Sarah Jenkins</h3>
+                <span class="review-stars">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-text">
+              "A truly premium shopping experience. Shipping was fast, packaging was secure and eco-friendly, and the customer service team was delightful when helping me track down Demon Slayer."
+            </p>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="images/avatar-3.svg" alt="David Chen Portrait" class="review-avatar">
+              <div class="review-meta">
+                <h3 class="review-name">David Chen</h3>
+                <span class="review-stars">★★★★★</span>
+              </div>
+            </div>
+            <p class="review-text">
+              "Excellent catalog selection! They carry both popular manga like Naruto and classic fantasy like The Hobbit. Highly recommended for students."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACT FORM ==================== -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Dummy Contact Details -->
+          <div class="contact-info">
+            <h3 class="contact-info-title">Drop by our Cozy Corner</h3>
+            <p class="contact-info-desc">
+              Whether you are looking for a rare title or just want to chat about literature over a warm cup of coffee, we are here to welcome you.
+            </p>
+            
+            <ul class="contact-details-list">
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>102 Literary Lane, Cozy Valley, CV 90210</p>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon">📞</span>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (555) 732-3787 (READ)</p>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon">✉️</span>
+                <div>
+                  <h4>Email</h4>
+                  <p>hello@bookstorecozy.com</p>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <span class="contact-detail-icon">🕒</span>
+                <div>
+                  <h4>Hours</h4>
+                  <p>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <form action="#" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully (Dummy Action)!');">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us what books you are searching for..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-top container">
+      <!-- Footer Brand Column -->
+      <div class="footer-col footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon">📖</span>
+          <span class="logo-text">Bookstore</span>
+        </a>
+        <p class="footer-desc">
+          A premium minimal sanctuary curated for lovers of wisdom, code, science, and beautiful storytelling. Warm woods, cozy lighting, and fine pages.
+        </p>
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" class="social-link"><span>📘</span></a>
+          <a href="#" aria-label="Twitter" class="social-link"><span>🐦</span></a>
+          <a href="#" aria-label="Instagram" class="social-link"><span>📸</span></a>
+          <a href="#" aria-label="LinkedIn" class="social-link"><span>💼</span></a>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Book Categories</a></li>
+          <li><a href="#featured">Featured Books</a></li>
+          <li><a href="#reviews">Reader Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- About Us Summary Column -->
+      <div class="footer-col">
+        <h3 class="footer-title">About Us</h3>
+        <p class="footer-text">
+          Established in 2026, Bookstore is an independent bookstore dedicated to promoting reading and making technical, self-help, and fictional literature easily accessible for college communities.
+        </p>
+      </div>
+
+      <!-- Privacy & Contact Column -->
+      <div class="footer-col">
+        <h3 class="footer-title">Privacy &amp; Terms</h3>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#contact">Find Store Location</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom container">
+      <p class="copyright">&copy; 2026 Bookstore. Designed as a Cozy College Lab Assignment. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

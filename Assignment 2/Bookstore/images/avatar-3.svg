@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Background circular frame -->
+  <circle cx="50" cy="50" r="50" fill="#2D5A27" />
+  
+  <!-- Face/Skin -->
+  <circle cx="50" cy="48" r="22" fill="#E0A96D" />
+  
+  <!-- Hair (Short Black Bob) -->
+  <path d="M 26 48 C 26 20, 74 20, 74 48 L 74 58 L 68 58 L 68 46 Q 50 36 32 46 L 32 58 L 26 58 Z" fill="#1C1A27" />
+
+  <!-- Eyes -->
+  <circle cx="43" cy="45" r="2" fill="#222" />
+  <circle cx="57" cy="45" r="2" fill="#222" />
+  
+  <!-- Red glasses -->
+  <rect x="36" y="40" width="14" height="10" rx="3" fill="none" stroke="#E2583E" stroke-width="2" />
+  <rect x="50" y="40" width="14" height="10" rx="3" fill="none" stroke="#E2583E" stroke-width="2" />
+  <line x1="50" y1="44" x2="50" y2="44" stroke="#E2583E" stroke-width="2" />
+
+  <!-- Smile -->
+  <path d="M 46 55 Q 50 59 54 55" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Neck -->
+  <rect x="46" y="65" width="8" height="12" fill="#D0985C" />
+
+  <!-- Scarf/Clothes -->
+  <path d="M 22 90 C 22 75, 78 75, 78 90 Z" fill="#1A1A1A" />
+  <!-- Warm Cozy Scarf wrap -->
+  <path d="M 35 72 Q 50 78 65 72 Q 70 85 62 88 Q 50 82 38 88 Q 30 85 35 72" fill="#DEB887" />
+  <path d="M 58 78 L 63 95 L 53 95 Z" fill="#DEB887" /> <!-- Hanging scarf end -->
+</svg>

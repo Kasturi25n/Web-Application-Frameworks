@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgClean" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141E30" />
+      <stop offset="100%" stop-color="#243B55" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgClean)" />
+
+  <!-- Code Bracket Graphic (Neon/Clean) -->
+  <g stroke="#00FFCC" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8">
+    <!-- Left Bracket -->
+    <path d="M 120 180 L 70 230 L 120 280" />
+    <!-- Right Bracket -->
+    <path d="M 280 180 L 330 230 L 280 280" />
+    <!-- Slash -->
+    <line x1="210" y1="160" x2="190" y2="300" stroke="#00FFCC" stroke-width="3" />
+  </g>
+  
+  <!-- Subtle binary grid in background -->
+  <g font-family="monospace" font-size="12" fill="#00FFCC" opacity="0.12" text-anchor="middle">
+    <text x="200" y="80">01000011 01001100 01000101 01000001 01001110</text>
+    <text x="200" y="340">01000011 01001111 01000100 01000101</text>
+    <text x="70" y="120">01101</text>
+    <text x="330" y="120">10010</text>
+    <text x="80" y="420">11010</text>
+    <text x="320" y="420">00101</text>
+  </g>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle">
+    <!-- Brand/Series Info -->
+    <text x="200" y="50" font-size="10" font-weight="600" fill="#00FFCC" letter-spacing="3">ROBERT C. MARTIN SERIES</text>
+    
+    <!-- Title -->
+    <text x="200" y="390" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="2">Clean Code</text>
+    
+    <!-- Subtitle -->
+    <text x="200" y="430" font-size="13" font-weight="600" fill="#E2E8F0" letter-spacing="1">A Handbook of Agile Software Craftsmanship</text>
+    
+    <!-- Author -->
+    <text x="200" y="510" font-size="16" font-weight="700" fill="#00FFCC">Robert C. Martin</text>
+    <text x="200" y="530" font-size="11" font-weight="500" fill="#94A3B8" letter-spacing="0.5">Foreword by James O. Coplien</text>
+  </g>
+</svg>

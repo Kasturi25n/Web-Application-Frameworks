@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAtomic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2583E" />
+      <stop offset="100%" stop-color="#9C2E1A" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Cover Background -->
+  <rect width="100%" height="100%" fill="url(#bgAtomic)" />
+  <rect width="100%" height="100%" fill="url(#glow)" />
+
+  <!-- Cover Art: Abstract Atoms / Circles of Habits -->
+  <g stroke="#F5E6D3" stroke-width="1.5" fill="none" opacity="0.4">
+    <circle cx="200" cy="250" r="120" />
+    <circle cx="200" cy="250" r="90" stroke-dasharray="8 6" />
+    <circle cx="200" cy="250" r="60" />
+    <circle cx="200" cy="250" r="30" stroke-dasharray="4 4" />
+  </g>
+  <g fill="#F5E6D3" opacity="0.8">
+    <circle cx="200" cy="130" r="6" />
+    <circle cx="320" cy="250" r="4" />
+    <circle cx="200" cy="370" r="8" />
+    <circle cx="80" cy="250" r="5" />
+    <circle cx="285" cy="335" r="5" />
+    <circle cx="115" cy="165" r="7" />
+  </g>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle" fill="#FFFFFF">
+    <!-- Author -->
+    <text x="200" y="80" font-size="14" letter-spacing="4" font-weight="500" fill="#F5E6D3">JAMES CLEAR</text>
+    
+    <!-- Decorative Line -->
+    <line x1="170" y1="95" x2="230" y2="95" stroke="#F5E6D3" stroke-width="2" opacity="0.8" />
+    
+    <!-- Title -->
+    <text x="200" y="470" font-size="36" font-weight="800" letter-spacing="2">ATOMIC</text>
+    <text x="200" y="515" font-size="36" font-weight="800" letter-spacing="2">HABITS</text>
+    
+    <!-- Subtitle -->
+    <text x="200" y="555" font-size="11" font-weight="500" fill="#F5E6D3" letter-spacing="1">An Easy &amp; Proven Way to Build Good Habits</text>
+  </g>
+</svg>

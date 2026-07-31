@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgNaruto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C00" />
+      <stop offset="100%" stop-color="#B22222" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Cover Background -->
+  <rect width="100%" height="100%" fill="url(#bgNaruto)" />
+  <rect width="100%" height="100%" fill="url(#glow)" />
+
+  <!-- Hidden Leaf Spiral (Uzumaki / Leaf symbol) -->
+  <path d="M 200 250 A 60 60 0 1 0 140 250 A 40 40 0 1 1 180 250 A 20 20 0 1 0 160 250 A 10 10 0 1 1 170 250" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9" />
+  <!-- Triangle pointing out for the leaf symbol -->
+  <path d="M 260 250 L 290 235 L 290 265 Z" fill="#FFFFFF" opacity="0.9" />
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle" fill="#FFFFFF">
+    <!-- Author -->
+    <text x="200" y="80" font-size="14" letter-spacing="4" font-weight="500" fill="#FFE4B5">MASASHI KISHIMOTO</text>
+    
+    <!-- Decorative Line -->
+    <line x1="170" y1="95" x2="230" y2="95" stroke="#FFE4B5" stroke-width="2" opacity="0.8" />
+    
+    <!-- Title -->
+    <text x="200" y="470" font-size="44" font-weight="800" letter-spacing="4" fill="#FFFFFF">NARUTO</text>
+    <text x="200" y="515" font-size="20" font-weight="600" letter-spacing="1" fill="#FFE4B5">VOL. 1: UZUMAKI NARUTO</text>
+    
+    <!-- Subtitle -->
+    <text x="200" y="555" font-size="11" font-weight="500" fill="#FFE4B5" letter-spacing="1">The World's Greatest Ninja Epic</text>
+  </g>
+</svg>

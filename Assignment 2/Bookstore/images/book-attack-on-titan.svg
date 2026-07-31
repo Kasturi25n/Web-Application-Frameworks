@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAoT" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#580F0F" />
+      <stop offset="100%" stop-color="#121315" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FF5555" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Cover Background -->
+  <rect width="100%" height="100%" fill="url(#bgAoT)" />
+  <rect width="100%" height="100%" fill="url(#glow)" />
+
+  <!-- Shield and Wings Silhouette (Wings of Freedom inspired) -->
+  <g stroke="#EAEAEA" stroke-width="2.5" fill="none" stroke-linejoin="round" opacity="0.8">
+    <!-- Outer Shield Boundary -->
+    <path d="M 150 170 L 250 170 L 270 230 C 270 300 200 340 200 340 C 200 340 130 300 130 230 Z" stroke-width="3" />
+    
+    <!-- Wing Silhouette Left (Dark Wing) -->
+    <path d="M 195 190 Q 155 220 150 260 Q 170 260 185 240 Q 165 270 160 290 Q 185 280 195 260" fill="#2D3238" stroke="#EAEAEA" stroke-width="2" />
+    
+    <!-- Wing Silhouette Right (Light Wing) -->
+    <path d="M 205 180 Q 245 210 250 250 Q 230 250 215 230 Q 235 260 240 280 Q 215 270 205 250" fill="#EAEAEA" stroke="#EAEAEA" stroke-width="2" />
+  </g>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle" fill="#FFFFFF">
+    <!-- Author -->
+    <text x="200" y="80" font-size="14" letter-spacing="4" font-weight="500" fill="#FF5555">HAJIME ISAYAMA</text>
+    
+    <!-- Decorative Line -->
+    <line x1="170" y1="95" x2="230" y2="95" stroke="#FF5555" stroke-width="2" opacity="0.8" />
+    
+    <!-- Title -->
+    <text x="200" y="470" font-size="34" font-weight="800" letter-spacing="2" fill="#EAEAEA">ATTACK ON TITAN</text>
+    <text x="200" y="515" font-size="20" font-weight="600" letter-spacing="1" fill="#FF5555">VOL. 1: SHINGEKI NO KYOJIN</text>
+    
+    <!-- Subtitle -->
+    <text x="200" y="555" font-size="11" font-weight="500" fill="#EAEAEA" letter-spacing="1">To the Ends of the Earth</text>
+  </g>
+</svg>

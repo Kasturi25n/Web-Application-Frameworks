@@ -1,0 +1,1021 @@
+/* ==========================================================================
+   Bookstore stylesheet
+   Theme: Cozy Library & Premium Minimalist UI
+   Strictly HTML5 & CSS3 Standard (No JS or External Frameworks)
+   ========================================================================== */
+
+/* ==================== 1. CSS VARIABLES & THEMING ==================== */
+:root {
+  /* Core Colors */
+  --primary-brown: #6F4E37;
+  --primary-brown-hover: #5A3F2C;
+  --accent-beige: #F5E6D3;
+  --accent-beige-light: #FAF5EF;
+  --color-black: #222222;
+  --color-white: #FFFFFF;
+  
+  /* Neutral Palette */
+  --color-gray-dark: #3A3A3A;
+  --color-gray-medium: #888888;
+  --color-gray-light: #E8E8E8;
+  
+  /* UI Element Specs */
+  --font-primary: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --container-width: 1200px;
+  
+  /* Shadow Systems */
+  --shadow-sm: 0 2px 4px rgba(34, 34, 34, 0.05);
+  --shadow-md: 0 8px 16px rgba(34, 34, 34, 0.08);
+  --shadow-lg: 0 16px 32px rgba(111, 78, 55, 0.12);
+  --shadow-hover: 0 20px 40px rgba(111, 78, 55, 0.18);
+  
+  /* Borders and Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== 2. GLOBAL RESET & BASE STYLES ==================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--accent-beige-light);
+  color: var(--color-black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+}
+
+/* ==================== 3. UTILITY & REUSABLE LAYOUTS ==================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Section Header styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  color: var(--primary-brown);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: -0.5px;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-brown);
+  margin: 1.25rem auto 0;
+  border-radius: var(--radius-full);
+}
+
+/* Buttons System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-brown);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-brown-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--accent-beige);
+  color: var(--primary-brown);
+  border: 1.5px solid var(--primary-brown);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-brown);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+/* Star system styling */
+.stars {
+  color: #F5A623;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.rating-number {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* ==================== 1. HEADER & NAVIGATION (STICKY) ==================== */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(250, 245, 239, 0.95); /* matching --accent-beige-light */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  transition: var(--transition-fast);
+  border-bottom: 1px solid rgba(111, 78, 55, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-brown);
+}
+
+.logo-icon {
+  font-size: 1.75rem;
+}
+
+.logo-text {
+  letter-spacing: -0.5px;
+}
+
+/* Nav Menu */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-gray-dark);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary-brown);
+}
+
+/* Slide line effect on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-brown);
+  transition: var(--transition-fast);
+  border-radius: var(--radius-full);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary-brown);
+  font-weight: 600;
+}
+
+/* ==================== 2. HERO BANNER ==================== */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(45, 27, 16, 0.65), rgba(30, 16, 8, 0.75)), url('images/hero-bg.svg') no-repeat center center/cover;
+  color: var(--color-white);
+  padding: 4rem 0;
+}
+
+.hero-content {
+  max-width: 650px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--accent-beige);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--accent-beige);
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+/* Keyframes for smooth initial load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== 3. BOOK CATEGORIES ==================== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.category-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(111, 78, 55, 0.04);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Corner accent blob */
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 100%, var(--accent-beige) 0%, transparent 70%);
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition-smooth);
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  transition: var(--transition-fast);
+}
+
+.category-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.category-desc {
+  font-size: 0.95rem;
+  color: var(--color-gray-dark);
+  line-height: 1.5;
+}
+
+/* Hover effects */
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-beige);
+}
+
+.category-card:hover::before {
+  opacity: 0.5;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* ==================== 4. FEATURED BOOKS ==================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.book-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(111, 78, 55, 0.05);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.book-cover-wrapper {
+  background-color: var(--accent-beige-light);
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.book-cover {
+  width: 170px;
+  height: 255px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.book-info {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.book-author {
+  font-size: 0.9rem;
+  color: var(--color-gray-medium);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.book-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.book-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-brown);
+}
+
+/* Hover effects for Book Card */
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(111, 78, 55, 0.15);
+}
+
+.book-card:hover .book-cover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 15px 35px rgba(111, 78, 55, 0.25);
+}
+
+/* ==================== 5. BOOK DETAILS TABLE ==================== */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-white);
+  border: 1px solid rgba(111, 78, 55, 0.08);
+}
+
+.table-details {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-details th {
+  background-color: var(--primary-brown);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 1.25rem 2rem;
+  letter-spacing: 0.5px;
+}
+
+.table-details td {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(111, 78, 55, 0.06);
+  font-size: 0.95rem;
+  color: var(--color-gray-dark);
+}
+
+.table-details tbody tr {
+  transition: var(--transition-fast);
+}
+
+/* Alternating Row Colors */
+.table-details tbody tr:nth-child(even) {
+  background-color: var(--accent-beige-light);
+}
+
+.table-details tbody tr:hover {
+  background-color: rgba(245, 230, 211, 0.3); /* subtle beige transparent */
+}
+
+/* Special styles inside table */
+.bold-text {
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.price-text {
+  font-weight: 700;
+  color: var(--primary-brown);
+}
+
+.text-accent {
+  color: #F5A623;
+}
+
+/* ==================== 6. CUSTOMER REVIEWS ==================== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.review-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(111, 78, 55, 0.04);
+  transition: var(--transition-smooth);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--accent-beige);
+  background-color: var(--accent-beige-light);
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.25rem;
+}
+
+.review-stars {
+  color: #F5A623;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+  font-style: italic;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-beige);
+}
+
+/* ==================== 7. CONTACT FORM & INFO ==================== */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.contact-info {
+  background-color: var(--primary-brown);
+  color: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.contact-info-desc {
+  font-size: 0.95rem;
+  color: var(--accent-beige);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.contact-detail-icon {
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.6rem;
+  border-radius: var(--radius-md);
+  line-height: 1;
+}
+
+.contact-detail-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--accent-beige);
+}
+
+.contact-detail-item p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Contact Form container */
+.contact-form-container {
+  background-color: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(111, 78, 55, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-beige-light);
+  color: var(--color-black);
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-brown);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(111, 78, 55, 0.15);
+}
+
+/* ==================== 8. FOOTER ==================== */
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-top: 5rem;
+  border-top: 4px solid var(--primary-brown);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+
+.footer-brand {
+  flex: 2 1 300px;
+}
+
+.footer-brand .logo {
+  margin-bottom: 1.25rem;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-gray-medium);
+  margin-bottom: 2rem;
+}
+
+/* Social icons block */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+  line-height: 1;
+}
+
+.social-link:hover {
+  background-color: var(--primary-brown);
+  transform: translateY(-3px) rotate(8deg);
+}
+
+/* Quick Links and Text */
+.footer-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary-brown);
+  border-radius: var(--radius-full);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--color-gray-medium);
+}
+
+.footer-links a:hover {
+  color: var(--accent-beige);
+  padding-left: 5px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-gray-medium);
+}
+
+/* Footer Bottom copyright */
+.footer-bottom {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-gray-medium);
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* ==================== 9. RESPONSIVE DESIGN (MEDIA QUERIES) ==================== */
+
+/* ---------- Tablet Breakpoint (Up to 1024px) ---------- */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ---------- Mobile Breakpoint (Up to 768px) ---------- */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header-container {
+    height: 70px;
+  }
+
+  /* Wrap navbar menu */
+  .nav {
+    display: none; /* Hide standard nav list for simplified responsive design or stacking */
+  }
+  
+  /* Alternative display for college lab simplicity: keep navigation bar simple and flexed but smaller */
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0.5rem 0;
+  }
+  
+  .header-action {
+    display: none; /* Hide header CTA button on mobile to save space */
+  }
+
+  .hero {
+    min-height: 60vh;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact-info, 
+  .contact-form-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Collapsible / Responsive Table Layout */
+  .table-details, 
+  .table-details thead, 
+  .table-details tbody, 
+  .table-details th, 
+  .table-details td, 
+  .table-details tr {
+    display: block;
+  }
+
+  .table-details thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-details tr {
+    border: 1px solid rgba(111, 78, 55, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white) !important;
+  }
+
+  .table-details td {
+    border: none;
+    border-bottom: 1px solid rgba(111, 78, 55, 0.05);
+    position: relative;
+    padding-left: 45%;
+    text-align: right;
+    min-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-details td:last-child {
+    border-bottom: none;
+  }
+
+  /* Insert column headers using data-label attribute */
+  .table-details td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1.5rem;
+    width: 35%;
+    text-align: left;
+    font-weight: 700;
+    color: var(--primary-brown);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* ---------- Extra Small Mobile Breakpoint (Up to 480px) ---------- */
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+  
+  .footer-top {
+    gap: 2rem;
+  }
+}

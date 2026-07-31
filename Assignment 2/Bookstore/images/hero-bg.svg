@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Warm background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1B10" />
+      <stop offset="40%" stop-color="#4A2E1B" />
+      <stop offset="100%" stop-color="#1E1008" />
+    </linearGradient>
+
+    <!-- Floor lamp light glow -->
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFEFA6" stop-opacity="0.6" />
+      <stop offset="30%" stop-color="#FFD275" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#FFB347" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFB347" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Warm shelf shading -->
+    <linearGradient id="shelfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5C3A21" />
+      <stop offset="10%" stop-color="#412817" />
+      <stop offset="90%" stop-color="#2A190E" />
+      <stop offset="100%" stop-color="#150C07" />
+    </linearGradient>
+
+    <!-- Books Shadow -->
+    <linearGradient id="bookShadow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Overlay texture / stars to give a cozy vibe -->
+  <g opacity="0.15">
+    <circle cx="200" cy="150" r="1.5" fill="#FFF" />
+    <circle cx="450" cy="80" r="1" fill="#FFF" />
+    <circle cx="850" cy="120" r="2" fill="#FFF" />
+    <circle cx="1050" cy="220" r="1.5" fill="#FFF" />
+    <circle cx="1380" cy="90" r="1.2" fill="#FFF" />
+    <circle cx="1500" cy="300" r="2" fill="#FFF" />
+  </g>
+
+  <!-- Bookshelves Left (Background) -->
+  <g opacity="0.25">
+    <!-- Shelves structure -->
+    <rect x="0" y="50" width="350" height="25" fill="#2E1C10" />
+    <rect x="0" y="250" width="350" height="25" fill="#2E1C10" />
+    <rect x="0" y="450" width="350" height="25" fill="#2E1C10" />
+    <rect x="0" y="650" width="350" height="25" fill="#2E1C10" />
+    
+    <!-- Books on shelf 1 -->
+    <rect x="20" y="75" width="22" height="175" fill="#8B4513" />
+    <rect x="42" y="90" width="25" height="160" fill="#CD853F" />
+    <rect x="67" y="110" width="20" height="140" fill="#DEB887" />
+    <rect x="92" y="80" width="28" height="170" fill="#A0522D" />
+    <rect x="125" y="120" width="18" height="130" fill="#5C3A21" />
+    <!-- Tilted books -->
+    <g transform="translate(190, 250) rotate(15) translate(-190, -250)">
+      <rect x="150" y="75" width="24" height="175" fill="#CD853F" />
+      <rect x="174" y="85" width="22" height="165" fill="#8B4513" />
+    </g>
+
+    <!-- Books on shelf 2 -->
+    <rect x="15" y="275" width="25" height="175" fill="#A0522D" />
+    <rect x="40" y="285" width="20" height="165" fill="#DEB887" />
+    <rect x="65" y="275" width="24" height="175" fill="#8B4513" />
+    <rect x="95" y="310" width="30" height="140" fill="#CD853F" />
+    <rect x="130" y="295" width="22" height="155" fill="#5C3A21" />
+  </g>
+
+  <!-- Bookshelves Right (Background) -->
+  <g opacity="0.25">
+    <rect x="1250" y="50" width="350" height="25" fill="#2E1C10" />
+    <rect x="1250" y="250" width="350" height="25" fill="#2E1C10" />
+    <rect x="1250" y="450" width="350" height="25" fill="#2E1C10" />
+    <rect x="1250" y="650" width="350" height="25" fill="#2E1C10" />
+
+    <!-- Books on right shelf 1 -->
+    <rect x="1300" y="75" width="24" height="175" fill="#CD853F" />
+    <rect x="1324" y="80" width="26" height="170" fill="#8B4513" />
+    <rect x="1355" y="100" width="20" height="150" fill="#DEB887" />
+    <rect x="1380" y="70" width="25" height="180" fill="#A0522D" />
+    <rect x="1410" y="110" width="18" height="140" fill="#5C3A21" />
+
+    <!-- Books on right shelf 2 -->
+    <rect x="1280" y="275" width="25" height="175" fill="#5C3A21" />
+    <rect x="1305" y="300" width="22" height="150" fill="#CD853F" />
+    <rect x="1335" y="280" width="28" height="170" fill="#A0522D" />
+    <rect x="1368" y="275" width="22" height="175" fill="#8B4513" />
+  </g>
+
+  <!-- Giant Cozy Window in the Middle-Right -->
+  <g opacity="0.15">
+    <!-- Window Frame -->
+    <rect x="750" y="80" width="400" height="450" rx="200" fill="none" stroke="#F5E6D3" stroke-width="8" />
+    <!-- Window Panes -->
+    <line x1="950" y1="80" x2="950" y2="530" stroke="#F5E6D3" stroke-width="4" />
+    <line x1="750" y1="280" x2="1150" y2="280" stroke="#F5E6D3" stroke-width="4" />
+    
+    <!-- Moon outside window -->
+    <circle cx="880" cy="180" r="35" fill="#FFEFA6" opacity="0.8" />
+    <circle cx="895" cy="165" r="35" fill="#2D1B10" /> <!-- Crescent effect -->
+  </g>
+
+  <!-- Big Warm Floor Lamp (Left Side) -->
+  <g id="FloorLamp" transform="translate(150, 100)">
+    <!-- Glow -->
+    <circle cx="200" cy="200" r="500" fill="url(#lampGlow)" pointer-events="none" />
+
+    <!-- Lamp structure -->
+    <!-- Base -->
+    <ellipse cx="200" cy="730" rx="70" ry="15" fill="#1C1008" />
+    <ellipse cx="200" cy="727" rx="65" ry="12" fill="#5C3A21" />
+    <!-- Pole -->
+    <rect x="195" y="180" width="10" height="540" fill="#5C3A21" />
+    <rect x="198" y="180" width="4" height="540" fill="#8B5A2B" opacity="0.6" />
+    <!-- Shade holder/Arm -->
+    <path d="M 200 180 Q 200 130 250 130 T 300 160" fill="none" stroke="#5C3A21" stroke-width="10" stroke-linecap="round" />
+    <!-- Shade -->
+    <path d="M 260 210 L 340 210 L 320 150 L 280 150 Z" fill="#D2B48C" stroke="#5C3A21" stroke-width="4" />
+    <!-- Light cone visualization -->
+    <polygon points="260,210 340,210 500,750 100,750" fill="#FFD275" opacity="0.15" />
+  </g>
+
+  <!-- Cozy Armchair (Right side, under window/light glow) -->
+  <g id="Armchair" transform="translate(1000, 480)" opacity="0.85">
+    <!-- Backrest -->
+    <rect x="50" y="50" width="220" height="240" rx="35" fill="#5C3A21" />
+    <rect x="65" y="65" width="190" height="210" rx="20" fill="#6F4E37" />
+    <!-- Cushion Seat -->
+    <rect x="30" y="210" width="260" height="70" rx="25" fill="#4E3321" />
+    <rect x="40" y="215" width="240" height="50" rx="15" fill="#5C3A21" />
+    <!-- Left Armrest -->
+    <rect x="15" y="160" width="50" height="110" rx="20" fill="#412817" />
+    <rect x="20" y="165" width="40" height="100" rx="15" fill="#5C3A21" />
+    <!-- Right Armrest -->
+    <rect x="255" y="160" width="50" height="110" rx="20" fill="#412817" />
+    <rect x="260" y="165" width="40" height="100" rx="15" fill="#5C3A21" />
+    <!-- Pillow -->
+    <rect x="90" y="180" width="140" height="60" rx="10" fill="#D2B48C" />
+    <path d="M 90 210 Q 160 190 230 210" fill="none" stroke="#A0522D" stroke-width="2" />
+    <!-- Chair legs -->
+    <rect x="60" y="275" width="20" height="50" rx="5" fill="#2E1C10" transform="rotate(10, 70, 275)" />
+    <rect x="240" y="275" width="20" height="50" rx="5" fill="#2E1C10" transform="rotate(-10, 250, 275)" />
+  </g>
+
+  <!-- Small side table next to chair -->
+  <g transform="translate(900, 630)" opacity="0.85">
+    <!-- Table top -->
+    <ellipse cx="60" cy="40" rx="70" ry="15" fill="#412817" />
+    <ellipse cx="60" cy="37" rx="66" ry="12" fill="#5C3A21" />
+    <!-- Table leg -->
+    <rect x="55" y="45" width="10" height="120" fill="#412817" />
+    <!-- Base -->
+    <ellipse cx="60" cy="165" rx="45" ry="10" fill="#412817" />
+    <!-- Steaming Coffee Cup -->
+    <path d="M 50 20 L 70 20 A 10 10 0 0 1 70 35 L 50 35 A 10 10 0 0 1 50 20 Z" fill="#D2B48C" />
+    <!-- Handle -->
+    <path d="M 70 23 A 5 5 0 0 1 75 28 A 5 5 0 0 1 70 32" fill="none" stroke="#D2B48C" stroke-width="3" />
+    <!-- Steam -->
+    <path d="M 54 15 Q 52 10 56 5" fill="none" stroke="#FFEFA6" stroke-width="2" opacity="0.5" stroke-linecap="round" />
+    <path d="M 60 17 Q 58 12 62 7" fill="none" stroke="#FFEFA6" stroke-width="2" opacity="0.5" stroke-linecap="round" />
+    <path d="M 66 16 Q 64 11 68 6" fill="none" stroke="#FFEFA6" stroke-width="2" opacity="0.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Warm ambient light overlay (to integrate foreground and background) -->
+  <rect width="100%" height="100%" fill="#FFD275" opacity="0.04" style="mix-blend-mode: screen;" pointer-events="none" />
+</svg>

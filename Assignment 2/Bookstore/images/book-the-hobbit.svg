@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHobbit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143B1D" />
+      <stop offset="100%" stop-color="#08140B" />
+    </linearGradient>
+    <radialGradient id="ringGlow" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Cover Background -->
+  <rect width="100%" height="100%" fill="url(#bgHobbit)" />
+  <rect width="100%" height="100%" fill="url(#ringGlow)" />
+
+  <!-- Mountain Contour & Lonely Mountain Sun/Ring -->
+  <g stroke="#D4AF37" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <!-- The One Ring / Sun over the mountain -->
+    <circle cx="200" cy="210" r="35" stroke-width="4.5" />
+    
+    <!-- Mountains -->
+    <path d="M 100 320 L 170 240 L 220 290 L 290 200 L 330 250" stroke-width="2" />
+    <path d="M 70 340 L 140 260 L 200 320 L 240 270 L 310 340" stroke-width="1.5" opacity="0.5" />
+    
+    <!-- Flying Dragon Silhouette (Smaug) -->
+    <path d="M 270 140 Q 285 130 300 135 Q 290 145 285 155 Q 275 145 270 140 Z" fill="#D4AF37" stroke-width="0" />
+  </g>
+
+  <!-- Typography -->
+  <g font-family="'Poppins', sans-serif" text-anchor="middle" fill="#FFFFFF">
+    <!-- Author -->
+    <text x="200" y="80" font-size="14" letter-spacing="4" font-weight="500" fill="#D4AF37">J. R. R. TOLKIEN</text>
+    
+    <!-- Decorative Line -->
+    <line x1="170" y1="95" x2="230" y2="95" stroke="#D4AF37" stroke-width="2" opacity="0.8" />
+    
+    <!-- Title -->
+    <text x="200" y="470" font-size="36" font-weight="800" letter-spacing="3" fill="#D4AF37">THE HOBBIT</text>
+    <text x="200" y="515" font-size="18" font-weight="600" letter-spacing="1">THERE AND BACK AGAIN</text>
+    
+    <!-- Subtitle -->
+    <text x="200" y="555" font-size="11" font-weight="500" fill="#D4AF37" letter-spacing="1">The Classic Fantasy Masterpiece</text>
+  </g>
+</svg>
