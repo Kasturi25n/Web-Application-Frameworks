@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#hackGrad)" />
+  <!-- Laptop Vector -->
+  <rect x="180" y="120" width="240" height="150" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="4" />
+  <!-- Screen content -->
+  <rect x="195" y="135" width="210" height="120" fill="#020617" rx="4" />
+  <text x="210" y="165" font-family="monospace" font-size="14" fill="#22c55e">&gt; hackathon_2026.start()</text>
+  <text x="210" y="190" font-family="monospace" font-size="12" fill="#38bdf8">const mode = "24 Hours";</text>
+  <text x="210" y="210" font-family="monospace" font-size="12" fill="#e0e7ff">const prize = "₹1,50,000";</text>
+  <text x="210" y="235" font-family="monospace" font-size="14" fill="#a855f7">Building the Future...</text>
+  <!-- Laptop Base -->
+  <path d="M 150 270 L 450 270 L 430 290 L 170 290 Z" fill="#475569" />
+  <rect x="260" y="275" width="80" height="6" rx="3" fill="#94a3b8" />
+  <!-- Accent Glow -->
+  <circle cx="500" cy="80" r="60" fill="#06b6d4" opacity="0.3" filter="blur(20px)" />
+</svg>

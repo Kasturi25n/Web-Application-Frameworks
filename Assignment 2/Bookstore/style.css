@@ -495,7 +495,70 @@ button, input, textarea {
   box-shadow: 0 15px 35px rgba(111, 78, 55, 0.25);
 }
 
-/* ==================== 5. BOOK DETAILS TABLE ==================== */
+/* ==================== 5. HOW IT WORKS (ORDERED LIST) ==================== */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.step-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(111, 78, 55, 0.05);
+  position: relative;
+  transition: var(--transition-smooth);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-beige);
+  color: var(--primary-brown);
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-brown);
+}
+
+.step-card:hover .step-number {
+  background-color: var(--primary-brown);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+/* ==================== 6. BOOK DETAILS TABLE ==================== */
 .table-responsive-wrapper {
   overflow-x: auto;
   border-radius: var(--radius-md);
@@ -861,6 +924,11 @@ button, input, textarea {
     gap: 2rem;
   }
 
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -934,6 +1002,12 @@ button, input, textarea {
   .books-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    max-width: 480px;
     margin: 0 auto;
   }
 
@@ -1019,3 +1093,68 @@ button, input, textarea {
     gap: 2rem;
   }
 }
+
+/* ==================== PRINT STYLESHEET OPTIMIZATION ==================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html, body {
+    background: var(--color-cream, #FAF7F2) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header {
+    position: relative !important;
+    top: 0 !important;
+    box-shadow: 0 2px 10px rgba(111, 78, 55, 0.08) !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .section-padding {
+    padding: 2.5rem 0 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .section-header {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  .category-card,
+  .book-card,
+  .step-card,
+  .review-card,
+  .table-responsive-wrapper,
+  .contact-info,
+  .contact-form-container,
+  .footer,
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .hero {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+  }
+}
+
