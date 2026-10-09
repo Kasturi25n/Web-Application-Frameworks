@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 26: Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form Validation</h2>
+    <input type="text" id="regName" placeholder="Name (Alphabets only)"><br><br>
+    <input type="text" id="regEmail" placeholder="Email"><br><br>
+    <input type="text" id="regMobile" placeholder="10-Digit Mobile"><br><br>
+    <input type="text" id="regPwd" placeholder="Password (8 chars, 1 upper, 1 lower, 1 digit)"><br><br>
+    <button onclick="validateForm()">Register</button>
+    
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function validateForm() {
+            let name = document.getElementById("regName").value;
+            let email = document.getElementById("regEmail").value;
+            let mobile = document.getElementById("regMobile").value;
+            let pwd = document.getElementById("regPwd").value;
+            let resultDiv = document.getElementById("output");
+            
+            let nameRegex = /^[a-zA-Z\s]+$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobileRegex = /^\d{10}$/;
+            let pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            
+            if (!nameRegex.test(name)) return resultDiv.innerHTML = "Invalid Name";
+            if (!emailRegex.test(email)) return resultDiv.innerHTML = "Invalid Email";
+            if (!mobileRegex.test(mobile)) return resultDiv.innerHTML = "Invalid Mobile";
+            if (!pwdRegex.test(pwd)) return resultDiv.innerHTML = "Invalid Password";
+            
+            resultDiv.innerHTML = "<span style='color:green;'>Registration Successful!</span>";
+        }
+    </script>
+</body>
+</html>

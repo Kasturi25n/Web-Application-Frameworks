@@ -1,0 +1,37 @@
+{
+  "name": "assignment-5-waf",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Assignment 5 - Web Application Framework (NodeJS, ExpressJS & ReactJS Lab Programs)",
+  "author": "Pushpam Raj Satyarthi",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "q1": "node Question-01/server.js",
+    "q2": "node Question-02/index.js",
+    "q3": "node Question-03/server.js",
+    "q4": "node Question-04/server.js",
+    "q5": "node Question-05/server.js",
+    "q6": "node Question-06/server.js",
+    "q7": "node Question-07/server.js",
+    "q8": "node Question-08/server.js",
+    "q9": "node Question-09/server.js",
+    "q10": "node Question-10/server.js",
+    "q14": "node Question-14/server.js",
+    "q17": "node Question-17/server.js",
+    "q18": "node Question-18/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  }
+}

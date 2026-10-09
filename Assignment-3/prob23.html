@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 23: Password Validation</title>
+</head>
+<body>
+    <h2>Password Validator (Basic)</h2>
+    <input type="text" id="password" placeholder="Enter password">
+    <button onclick="validatePassword()">Validate</button>
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function validatePassword() {
+            let pwd = document.getElementById("password").value;
+            // Lookaheads for lowercase, uppercase, digit, and min length 8
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            let resultDiv = document.getElementById("output");
+            
+            if (regex.test(pwd)) {
+                resultDiv.innerText = "Strong Password";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerText = "Invalid: Needs 8+ chars, 1 upper, 1 lower, 1 digit";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

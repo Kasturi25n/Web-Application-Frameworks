@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 27: Advanced Password</title>
+</head>
+<body>
+    <h2>Password Validator (Advanced)</h2>
+    <input type="text" id="advPassword" placeholder="Enter advanced password">
+    <button onclick="validateAdvPassword()">Validate</button>
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function validateAdvPassword() {
+            let pwd = document.getElementById("advPassword").value;
+            // Added special character lookahead [\W_]
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+            let resultDiv = document.getElementById("output");
+            
+            if (regex.test(pwd)) {
+                resultDiv.innerText = "Highly Secure Password";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerText = "Invalid: Needs 8+ chars, upper, lower, digit, AND special char";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

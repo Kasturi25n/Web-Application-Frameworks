@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 40: Character Counter</title>
+    <style>
+        textarea { width: 300px; height: 100px; }
+    </style>
+</head>
+<body>
+    <h2>Live Metrics: Character Count</h2>
+    <textarea id="textInput" oninput="updateCount()" placeholder="Start typing here..."></textarea>
+    <div id="output" style="margin-top: 10px; font-weight: bold;">Characters: 0</div>
+    
+    <script>
+        function updateCount() {
+            let currentText = document.getElementById("textInput").value;
+            let length = currentText.length;
+            document.getElementById("output").innerText = `Characters: ${length}`;
+            
+            // Optional: Turn red if over 50 chars to show threshold logic
+            if(length > 50) {
+                document.getElementById("output").style.color = "red";
+            } else {
+                document.getElementById("output").style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 34: Change Paragraph</title>
+</head>
+<body>
+    <h2>Text Mutator</h2>
+    <p id="targetPara">This is the original baseline text. It is waiting to be mutated.</p>
+    <button onclick="mutateText()">Mutate Text</button>
+    
+    <script>
+        function mutateText() {
+            document.getElementById("targetPara").innerText = "The baseline text has been successfully overridden by the event handler.";
+            document.getElementById("targetPara").style.color = "blue";
+        }
+    </script>
+</body>
+</html>

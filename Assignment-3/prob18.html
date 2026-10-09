@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 18: Counter</title>
+</head>
+<body>
+    <h2>Counter Application</h2>
+    <h3 id="counterDisplay">0</h3>
+    <button onclick="updateCounter('inc')">Increment</button>
+    <button onclick="updateCounter('dec')">Decrement</button>
+    <button onclick="updateCounter('reset')">Reset</button>
+    
+    <script>
+        let counter = 0; // State variable
+        
+        function updateCounter(action) {
+            if (action === 'inc') counter++;
+            else if (action === 'dec') counter--;
+            else if (action === 'reset') counter = 0;
+            
+            document.getElementById("counterDisplay").innerText = counter;
+        }
+    </script>
+</body>
+</html>

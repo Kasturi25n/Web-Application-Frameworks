@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 24: Only Alphabets</title>
+</head>
+<body>
+    <h2>Alphabet Checker</h2>
+    <input type="text" id="strInput" placeholder="Enter text">
+    <button onclick="checkAlphabets()">Check</button>
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function checkAlphabets() {
+            let str = document.getElementById("strInput").value;
+            let regex = /^[a-zA-Z]+$/;
+            let resultDiv = document.getElementById("output");
+            
+            if (regex.test(str)) {
+                resultDiv.innerText = "Contains ONLY alphabets";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerText = "Contains non-alphabet characters";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

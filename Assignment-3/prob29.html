@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 29: PIN Code Form</title>
+</head>
+<body>
+    <h2>Form with PIN Validation</h2>
+    <input type="text" id="fName" placeholder="Name"><br><br>
+    <input type="text" id="fEmail" placeholder="Email"><br><br>
+    <input type="text" id="fMobile" placeholder="10-Digit Mobile"><br><br>
+    <input type="text" id="fPin" placeholder="6-Digit PIN Code"><br><br>
+    <button onclick="validatePinForm()">Submit</button>
+    
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function validatePinForm() {
+            let name = document.getElementById("fName").value;
+            let email = document.getElementById("fEmail").value;
+            let mobile = document.getElementById("fMobile").value;
+            let pin = document.getElementById("fPin").value;
+            let resultDiv = document.getElementById("output");
+            
+            if (!/^[a-zA-Z\s]+$/.test(name)) return resultDiv.innerHTML = "Invalid Name";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return resultDiv.innerHTML = "Invalid Email";
+            if (!/^\d{10}$/.test(mobile)) return resultDiv.innerHTML = "Invalid Mobile";
+            if (!/^\d{6}$/.test(pin)) return resultDiv.innerHTML = "Invalid PIN (Must be 6 digits)";
+            
+            resultDiv.innerHTML = "<span style='color:green;'>All fields valid!</span>";
+        }
+    </script>
+</body>
+</html>

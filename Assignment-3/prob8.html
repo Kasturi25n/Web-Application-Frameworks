@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 8: Multiplication Table</title>
+</head>
+<body>
+    <h2>Problem 8 Output</h2>
+    <div id="output"></div>
+    <script>
+        function generateTable(num) {
+            let tableHTML = "";
+            for (let i = 1; i <= 10; i++) {
+                tableHTML += `${num} x ${i} = ${num * i} <br>`;
+            }
+            return tableHTML;
+        }
+        
+        document.getElementById("output").innerHTML = generateTable(7);
+    </script>
+</body>
+</html>

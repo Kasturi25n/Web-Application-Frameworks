@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 5: Even or Odd</title>
+</head>
+<body>
+    <h2>Problem 5 Output</h2>
+    <div id="output"></div>
+    <script>
+        function checkParity(num) {
+            if (num % 2 === 0) {
+                return num + " is Even";
+            } else {
+                return num + " is Odd";
+            }
+        }
+        
+        document.getElementById("output").innerHTML = checkParity(27);
+    </script>
+</body>
+</html>

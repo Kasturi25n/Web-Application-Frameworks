@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 3: Rectangle Metrics</title>
+</head>
+<body>
+    <h2>Problem 3 Output</h2>
+    <div id="output"></div>
+    <script>
+        function getRectMetrics(length, width) {
+            let area = length * width;
+            let perimeter = 2 * (length + width);
+            return `Area: ${area} <br> Perimeter: ${perimeter}`;
+        }
+        
+        document.getElementById("output").innerHTML = getRectMetrics(10, 5);
+    </script>
+</body>
+</html>

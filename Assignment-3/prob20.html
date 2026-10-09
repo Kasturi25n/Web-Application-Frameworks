@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 20: Mini Calculator</title>
+</head>
+<body>
+    <h2>Mini Web Calculator</h2>
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+    <br><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    
+    <h3 id="result" style="color: darkblue;"></h3>
+    
+    <script>
+        function calculate(operator) {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            let resultDiv = document.getElementById("result");
+            
+            if (isNaN(a) || isNaN(b)) {
+                resultDiv.innerText = "Please enter valid numbers.";
+                return;
+            }
+            
+            let res;
+            if (operator === '+') res = a + b;
+            else if (operator === '-') res = a - b;
+            else if (operator === '*') res = a * b;
+            else if (operator === '/') res = b !== 0 ? a / b : "Zero Division Error";
+            
+            resultDiv.innerText = `Result: ${res}`;
+        }
+    </script>
+</body>
+</html>

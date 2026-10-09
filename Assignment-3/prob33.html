@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 33: Mouse Coordinates</title>
+    <style>
+        #trackerArea { width: 300px; height: 200px; background-color: #f0f0f0; border: 2px dashed #333; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Coordinate Tracker</h2>
+    <div id="trackerArea" onmousemove="trackCoordinates(event)">
+        Move mouse inside this box
+    </div>
+    <div id="output" style="margin-top: 15px; font-weight: bold; font-family: monospace;">X: 0, Y: 0</div>
+    
+    <script>
+        function trackCoordinates(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            document.getElementById("output").innerText = `X: ${x}, Y: ${y}`;
+        }
+    </script>
+</body>
+</html>

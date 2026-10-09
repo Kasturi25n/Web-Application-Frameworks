@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 9: Sum of N Natural Numbers</title>
+</head>
+<body>
+    <h2>Problem 9 Output</h2>
+    <div id="output"></div>
+    <script>
+        function sumNaturalNumbers(n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        
+        document.getElementById("output").innerHTML = 
+            "Sum of first 100 natural numbers: " + sumNaturalNumbers(100);
+    </script>
+</body>
+</html>

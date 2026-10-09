@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 7: Factorial</title>
+</head>
+<body>
+    <h2>Problem 7 Output</h2>
+    <div id="output"></div>
+    <script>
+        function getFactorial(n) {
+            if (n < 0) return "Undefined for negative numbers";
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        
+        document.getElementById("output").innerHTML = "Factorial of 5 is: " + getFactorial(5);
+    </script>
+</body>
+</html>

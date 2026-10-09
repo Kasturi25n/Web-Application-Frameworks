@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 11: Count Digits</title>
+</head>
+<body>
+    <h2>Problem 11 Output</h2>
+    <div id="output"></div>
+    <script>
+        function countDigits(num) {
+            let count = 0;
+            let temp = Math.abs(num); // Handle negative numbers
+            if (temp === 0) return 1;
+            
+            while (temp > 0) {
+                count++;
+                temp = Math.floor(temp / 10);
+            }
+            return count;
+        }
+        
+        let testValue = 45892;
+        document.getElementById("output").innerHTML = `Number of digits in ${testValue} is: ${countDigits(testValue)}`;
+    </script>
+</body>
+</html>

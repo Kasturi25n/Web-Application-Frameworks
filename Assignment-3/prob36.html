@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 36: State Counter</title>
+</head>
+<body>
+    <h2>Active State Counter</h2>
+    <h3 id="counterValue">0</h3>
+    <button onclick="adjustCounter(1)">Increment</button>
+    <button onclick="adjustCounter(-1)">Decrement</button>
+    
+    <script>
+        let state = 0;
+        function adjustCounter(modifier) {
+            state += modifier;
+            document.getElementById("counterValue").innerText = state;
+        }
+    </script>
+</body>
+</html>

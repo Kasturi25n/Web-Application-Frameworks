@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 10: Prime Checker</title>
+</head>
+<body>
+    <h2>Problem 10 Output</h2>
+    <div id="output"></div>
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num === 2) return true;
+            
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        
+        let testNum = 29;
+        document.getElementById("output").innerHTML = 
+            testNum + (isPrime(testNum) ? " is a Prime Number" : " is NOT a Prime Number");
+    </script>
+</body>
+</html>

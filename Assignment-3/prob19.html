@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 19: Evens and Odds Range</title>
+</head>
+<body>
+    <h2>Range Sorter</h2>
+    <input type="number" id="start" placeholder="Start (e.g., 1)">
+    <input type="number" id="end" placeholder="End (e.g., 10)">
+    <button onclick="generateNumbers()">Generate</button>
+    
+    <div id="output" style="margin-top: 15px;"></div>
+    
+    <script>
+        function generateNumbers() {
+            let start = parseInt(document.getElementById("start").value);
+            let end = parseInt(document.getElementById("end").value);
+            
+            if (isNaN(start) || isNaN(end) || start > end) {
+                document.getElementById("output").innerHTML = "Invalid range.";
+                return;
+            }
+            
+            let evens = [];
+            let odds = [];
+            
+            for (let i = start; i <= end; i++) {
+                if (i % 2 === 0) evens.push(i);
+                else odds.push(i);
+            }
+            
+            document.getElementById("output").innerHTML = 
+                `<strong>Evens:</strong> ${evens.join(', ')} <br> <strong>Odds:</strong> ${odds.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 32: Mouseover Background</title>
+    <style>
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Environment Control</h2>
+    <button onmouseover="changeBgColor()" onmouseout="resetBgColor()">Hover Over Me</button>
+    
+    <script>
+        function changeBgColor() {
+            document.body.style.backgroundColor = "lightgreen";
+            document.body.style.transition = "background-color 0.3s ease";
+        }
+        function resetBgColor() {
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 39: Image Gallery</title>
+</head>
+<body>
+    <h2>Dynamic Gallery</h2>
+    <!-- Using placeholder images for demonstration -->
+    <img id="galleryImage" src="https://via.placeholder.com/300/09f/fff?text=Image+1" alt="Gallery Image" style="display:block; margin-bottom: 10px;">
+    
+    <button onclick="navigateGallery(-1)">Previous</button>
+    <button onclick="navigateGallery(1)">Next</button>
+    
+    <script>
+        const images = [
+            "https://via.placeholder.com/300/09f/fff?text=Image+1",
+            "https://via.placeholder.com/300/e74c3c/fff?text=Image+2",
+            "https://via.placeholder.com/300/2ecc71/fff?text=Image+3"
+        ];
+        let currentIndex = 0;
+        
+        function navigateGallery(direction) {
+            currentIndex += direction;
+            
+            // Loop back logic
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            
+            document.getElementById("galleryImage").src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

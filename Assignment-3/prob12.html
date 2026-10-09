@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 12: Reverse Digits</title>
+</head>
+<body>
+    <h2>Problem 12 Output</h2>
+    <div id="output"></div>
+    <script>
+        function reverseNumber(num) {
+            let reversed = 0;
+            let temp = Math.abs(num);
+            
+            while (temp > 0) {
+                let lastDigit = temp % 10;
+                reversed = (reversed * 10) + lastDigit;
+                temp = Math.floor(temp / 10);
+            }
+            return num < 0 ? -reversed : reversed;
+        }
+        
+        let testValue = 9876;
+        document.getElementById("output").innerHTML = `Reverse of ${testValue} is: ${reverseNumber(testValue)}`;
+    </script>
+</body>
+</html>

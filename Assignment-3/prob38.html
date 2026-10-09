@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 38: Prevent Default</title>
+</head>
+<body>
+    <h2>Form Hijacker (SPA Simulation)</h2>
+    <form id="userForm" onsubmit="handleForm(event)">
+        <input type="text" id="fName" placeholder="Name" required><br><br>
+        <input type="email" id="fEmail" placeholder="Email" required><br><br>
+        <button type="submit">Submit Without Refresh</button>
+    </form>
+    
+    <div id="output" style="margin-top: 20px; padding: 10px; border: 1px solid black; display: none;"></div>
+    
+    <script>
+        function handleForm(event) {
+            // STOP the page from refreshing
+            event.preventDefault(); 
+            
+            let name = document.getElementById("fName").value;
+            let email = document.getElementById("fEmail").value;
+            let outputDiv = document.getElementById("output");
+            
+            outputDiv.style.display = "block";
+            outputDiv.innerHTML = `<strong>Data Captured Successfully:</strong><br>Name: ${name}<br>Email: ${email}`;
+        }
+    </script>
+</body>
+</html>

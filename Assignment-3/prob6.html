@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 6: Largest of Three</title>
+</head>
+<body>
+    <h2>Problem 6 Output</h2>
+    <div id="output"></div>
+    <script>
+        function findLargest(a, b, c) {
+            if (a >= b && a >= c) return a;
+            else if (b >= a && b >= c) return b;
+            else return c;
+        }
+        
+        document.getElementById("output").innerHTML = 
+            "Largest is: " + findLargest(45, 89, 12);
+    </script>
+</body>
+</html>

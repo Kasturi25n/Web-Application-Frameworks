@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 17: Accept User Input</title>
+</head>
+<body>
+    <h2>User Input Form</h2>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <input type="text" id="userRole" placeholder="Enter your role">
+    <button onclick="displayData()">Submit</button>
+    
+    <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
+    
+    <script>
+        function displayData() {
+            let name = document.getElementById("userName").value;
+            let role = document.getElementById("userRole").value;
+            document.getElementById("output").innerHTML = `Welcome, ${name}. Role logged as: ${role}`;
+        }
+    </script>
+</body>
+</html>

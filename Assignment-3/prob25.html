@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 25: Only Numbers</title>
+</head>
+<body>
+    <h2>Number Checker</h2>
+    <input type="text" id="numInput" placeholder="Enter numbers">
+    <button onclick="checkNumbers()">Check</button>
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function checkNumbers() {
+            let str = document.getElementById("numInput").value;
+            let regex = /^\d+$/;
+            let resultDiv = document.getElementById("output");
+            
+            if (regex.test(str)) {
+                resultDiv.innerText = "Contains ONLY numbers";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerText = "Contains non-numeric characters";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

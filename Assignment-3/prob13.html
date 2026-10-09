@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 13: Switch Calculator</title>
+</head>
+<body>
+    <h2>Problem 13 Output</h2>
+    <div id="output"></div>
+    <script>
+        function switchCalculator(a, b, operator) {
+            let result;
+            switch (operator) {
+                case '+': result = a + b; break;
+                case '-': result = a - b; break;
+                case '*': result = a * b; break;
+                case '/': result = b !== 0 ? a / b : "Cannot divide by zero"; break;
+                default: result = "Invalid operator";
+            }
+            return `${a} ${operator} ${b} = ${result}`;
+        }
+        
+        document.getElementById("output").innerHTML = switchCalculator(20, 5, '*');
+    </script>
+</body>
+</html>

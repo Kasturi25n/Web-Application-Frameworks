@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 2: Arithmetic</title>
+</head>
+<body>
+    <h2>Problem 2 Output</h2>
+    <div id="output"></div>
+    <script>
+        function calculateAll(a, b) {
+            let add = a + b;
+            let sub = a - b;
+            let mul = a * b;
+            let div = a / b;
+            let mod = a % b;
+            
+            return `Add: ${add}<br>Sub: ${sub}<br>Mul: ${mul}<br>Div: ${div}<br>Mod: ${mod}`;
+        }
+        
+        document.getElementById("output").innerHTML = calculateAll(15, 4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 16: Change Background</title>
+</head>
+<body>
+    <h2>Background Color Controller</h2>
+    <button onclick="changeBackground()">Toggle Color</button>
+    <script>
+        function changeBackground() {
+            // Using a simple conditional toggle
+            if (document.body.style.backgroundColor === "lightblue") {
+                document.body.style.backgroundColor = "white";
+            } else {
+                document.body.style.backgroundColor = "lightblue";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 22: Mobile Validation</title>
+</head>
+<body>
+    <h2>10-Digit Mobile Validator</h2>
+    <input type="text" id="mobile" placeholder="Enter mobile number">
+    <button onclick="validateMobile()">Validate</button>
+    <div id="output" style="margin-top: 15px; font-weight: bold;"></div>
+    
+    <script>
+        function validateMobile() {
+            let mobile = document.getElementById("mobile").value;
+            let regex = /^\d{10}$/;
+            let resultDiv = document.getElementById("output");
+            
+            if (regex.test(mobile)) {
+                resultDiv.innerText = "Valid Mobile Number";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.innerText = "Invalid: Must be exactly 10 digits";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

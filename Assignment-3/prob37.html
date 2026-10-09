@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 37: Interactive Div</title>
+    <style>
+        #interactiveBox { width: 200px; height: 200px; background-color: #3498db; color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+    </style>
+</head>
+<body>
+    <h2>Boundary Detection</h2>
+    <div id="interactiveBox" onmouseenter="enterZone(this)" onmouseleave="leaveZone(this)">
+        Resting State
+    </div>
+    
+    <script>
+        function enterZone(element) {
+            element.style.backgroundColor = "#e74c3c";
+            element.innerText = "Active State!";
+        }
+        function leaveZone(element) {
+            element.style.backgroundColor = "#3498db";
+            element.innerText = "Resting State";
+        }
+    </script>
+</body>
+</html>
