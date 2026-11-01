@@ -1,0 +1,16 @@
+{
+  "name": "assignment-6-waf",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Assignment 6 - Web Application Framework (MongoDB & NodeJS Lab Programs)",
+  "author": "Pushpam Raj Satyarthi",
+  "scripts": {
+    "q1": "mongosh Question-01/movies.js",
+    "q2": "mongosh Question-02/equipment.js",
+    "q3": "node Question-03/busReservation.js",
+    "q4": "node Question-04/onlineShopping.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0"
+  }
+}
